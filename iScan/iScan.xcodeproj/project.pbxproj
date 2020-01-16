@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81F3EDD223CF0FF80019D35A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3EDD123CF0FF80019D35A /* AppDelegate.swift */; };
+		81E62EF023D03DB000E4FCB2 /* ISOpenCVImageProcesser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E62EEF23D03DB000E4FCB2 /* ISOpenCVImageProcesser.mm */; };
+		81E62EF223D0679200E4FCB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E62EF123D0679200E4FCB2 /* AppDelegate.swift */; };
+		81E62EF523D09E4C00E4FCB2 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E62EF423D09E4C00E4FCB2 /* UIImage+Alpha.m */; };
 		81F3EDD423CF0FF80019D35A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3EDD323CF0FF80019D35A /* ViewController.swift */; };
 		81F3EDD723CF0FF80019D35A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F3EDD523CF0FF80019D35A /* Main.storyboard */; };
 		81F3EDD923CF0FF90019D35A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F3EDD823CF0FF90019D35A /* Assets.xcassets */; };
@@ -40,8 +42,13 @@
 		34CC34B2E34EF38B544B9199 /* libPods-iScan-iScanUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iScan-iScanUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EFC38FC49226B14CE65323 /* libPods-iScanTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iScanTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7352EEC78AE7843511D4484B /* Pods-iScan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iScan.debug.xcconfig"; path = "Target Support Files/Pods-iScan/Pods-iScan.debug.xcconfig"; sourceTree = "<group>"; };
+		81E62EED23D03DAF00E4FCB2 /* iScan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iScan-Bridging-Header.h"; sourceTree = "<group>"; };
+		81E62EEE23D03DB000E4FCB2 /* ISOpenCVImageProcesser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISOpenCVImageProcesser.h; sourceTree = "<group>"; };
+		81E62EEF23D03DB000E4FCB2 /* ISOpenCVImageProcesser.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ISOpenCVImageProcesser.mm; sourceTree = "<group>"; };
+		81E62EF123D0679200E4FCB2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81E62EF323D09E4C00E4FCB2 /* UIImage+Alpha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		81E62EF423D09E4C00E4FCB2 /* UIImage+Alpha.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
 		81F3EDCE23CF0FF80019D35A /* iScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		81F3EDD123CF0FF80019D35A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../New Group/AppDelegate.swift"; sourceTree = "<group>"; };
 		81F3EDD323CF0FF80019D35A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81F3EDD623CF0FF80019D35A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81F3EDD823CF0FF90019D35A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,9 +112,29 @@
 		81044D8423D00A84001D8B7E /* App */ = {
 			isa = PBXGroup;
 			children = (
-				81F3EDD123CF0FF80019D35A /* AppDelegate.swift */,
+				81E62EED23D03DAF00E4FCB2 /* iScan-Bridging-Header.h */,
+				81E62EF123D0679200E4FCB2 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		81E62EEB23D03D9A00E4FCB2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				81E62EEC23D03DA000E4FCB2 /* ISOpenCVImageProcesser */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		81E62EEC23D03DA000E4FCB2 /* ISOpenCVImageProcesser */ = {
+			isa = PBXGroup;
+			children = (
+				81E62EF323D09E4C00E4FCB2 /* UIImage+Alpha.h */,
+				81E62EF423D09E4C00E4FCB2 /* UIImage+Alpha.m */,
+				81E62EEE23D03DB000E4FCB2 /* ISOpenCVImageProcesser.h */,
+				81E62EEF23D03DB000E4FCB2 /* ISOpenCVImageProcesser.mm */,
+			);
+			path = ISOpenCVImageProcesser;
 			sourceTree = "<group>";
 		};
 		81F3EDC523CF0FF80019D35A = {
@@ -135,6 +162,7 @@
 		81F3EDD023CF0FF80019D35A /* iScan */ = {
 			isa = PBXGroup;
 			children = (
+				81E62EEB23D03D9A00E4FCB2 /* Base */,
 				81044D8423D00A84001D8B7E /* App */,
 				81F3EDD323CF0FF80019D35A /* ViewController.swift */,
 				81F3EDD523CF0FF80019D35A /* Main.storyboard */,
@@ -244,6 +272,7 @@
 				TargetAttributes = {
 					81F3EDCD23CF0FF80019D35A = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					81F3EDE123CF0FF90019D35A = {
 						CreatedOnToolsVersion = 10.2;
@@ -376,8 +405,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E62EF523D09E4C00E4FCB2 /* UIImage+Alpha.m in Sources */,
+				81E62EF223D0679200E4FCB2 /* AppDelegate.swift in Sources */,
+				81E62EF023D03DB000E4FCB2 /* ISOpenCVImageProcesser.mm in Sources */,
 				81F3EDD423CF0FF80019D35A /* ViewController.swift in Sources */,
-				81F3EDD223CF0FF80019D35A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,12 +584,12 @@
 			baseConfigurationReference = 7352EEC78AE7843511D4484B /* Pods-iScan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F24R2G835;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/iScan/ThirdPartLibs",
 				);
 				INFOPLIST_FILE = iScan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -569,6 +600,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = zzyong.iScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iScan/App/iScan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7";
@@ -580,12 +613,12 @@
 			baseConfigurationReference = 9B35A95293FF76E9A5B8BAC0 /* Pods-iScan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F24R2G835;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/iScan/ThirdPartLibs",
 				);
 				INFOPLIST_FILE = iScan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -595,6 +628,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zzyong.iScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iScan/App/iScan-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7";
