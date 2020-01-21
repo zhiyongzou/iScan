@@ -6,6 +6,9 @@
 //  Copyright © 2020 zzyong. All rights reserved.
 //
 // OpenCV docs: https://docs.opencv.org/4.1.0/
+// tessdata: https://github.com/tesseract-ocr/tessdata
+// MMCamScanner: https://github.com/mukyasa/MMCamScanner
+// SwiftyTesseract: https://github.com/SwiftyTesseract/SwiftyTesseract
 
 
 #ifdef __cplusplus
@@ -20,7 +23,7 @@
 
 @implementation ISOpenCVImageProcesser
 
-+ (UIImage *)converToGrayImage:(UIImage *)originalImg
++ (nullable UIImage *)converToGrayImage:(UIImage *)originalImg
 {
     if (originalImg == nil) {
         return nil;
@@ -33,7 +36,7 @@
     return MatToUIImage(greyMat);
 }
 
-+ (UIImage *)converToThresholdImage:(UIImage *)originalImg
++ (nullable UIImage *)converToThresholdImage:(UIImage *)originalImg
 {
     if (originalImg == nil) {
         return nil;
@@ -41,7 +44,7 @@
     
     cv::Mat thresholdMat;
     UIImageToMat(originalImg, thresholdMat, originalImg.hasAlpha);
-    cv::threshold(thresholdMat, thresholdMat, 100, 255, cv::THRESH_BINARY_INV);
+    cv::threshold(thresholdMat, thresholdMat, 127, 255, cv::THRESH_BINARY);
     
     return MatToUIImage(thresholdMat);
 }

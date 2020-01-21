@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ISOpenCVImageProcesser : NSObject
 
-+ (UIImage *)converToGrayImage:(UIImage *)originalImg;
++ (nullable UIImage *)converToGrayImage:(UIImage *)originalImg;
 
-+ (UIImage *)converToThresholdImage:(UIImage *)originalImg;
++ (nullable UIImage *)converToThresholdImage:(UIImage *)originalImg;
 
 @end
 
